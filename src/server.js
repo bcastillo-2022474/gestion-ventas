@@ -6,6 +6,7 @@ import { dbConnection } from "./db/db-connection.js";
 import productRoutes from "./products/product.routes.js";
 import mongoose from "mongoose";
 import categoryRoutes from "./category/category.routes.js";
+import userRoutes from "./user/user.routes.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/category", categoryRoutes);
+app.use("/api/user", userRoutes);
 
 app.use("*", (req, res) => {
   res.status(404).json({ message: "Route not found" });

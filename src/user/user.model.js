@@ -6,12 +6,10 @@ const User = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
   },
   username: {
     type: String,
     required: true,
-    unique: true,
   },
   password: {
     type: String,
@@ -28,5 +26,15 @@ const User = new Schema({
     default: true,
   },
 });
+
+User.index(
+  { email: 1, tp_status: 1 },
+  { unique: true, partialFilterExpression: { tp_status: true } },
+);
+
+User.index(
+  { username: 1, tp_status: 1 },
+  { unique: true, partialFilterExpression: { tp_status: true } },
+);
 
 export default model("User", User);

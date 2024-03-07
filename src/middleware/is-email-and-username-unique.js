@@ -1,6 +1,6 @@
 import User from "../user/user.model.js";
 
-export const isEmailOrUsernameUnique = async ({ username, email }) => {
+export const isEmailAndUsernameUnique = async ({ username, email }) => {
   const foundUser = await User.findOne({
     $or: [{ username }, { email }],
     tp_status: true,
@@ -8,7 +8,7 @@ export const isEmailOrUsernameUnique = async ({ username, email }) => {
   if (!foundUser) return;
 
   if (foundUser.email === email && foundUser.username === username) {
-    throw new Error("Email and username already exists");
+    throw new Error("This user already exists, try login in");
   }
 
   if (foundUser.username === username) {

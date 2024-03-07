@@ -2,7 +2,7 @@ import Router from "express";
 import { body } from "express-validator";
 import { validateRequestParams } from "../middleware/validate-request-params.js";
 import { login, signup } from "./auth.controller.js";
-import { isEmailOrUsernameUnique } from "../middleware/is-email-or-username-unique.js";
+import { isEmailAndUsernameUnique } from "../middleware/is-email-and-username-unique.js";
 
 const router = Router();
 
@@ -41,7 +41,7 @@ router.post(
       minNumbers: 1,
       minSymbols: 0,
     }),
-    body("").custom(isEmailOrUsernameUnique),
+    body("").custom(isEmailAndUsernameUnique),
     validateRequestParams,
   ],
   signup,

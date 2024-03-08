@@ -7,6 +7,7 @@ import productRoutes from "./products/product.routes.js";
 import mongoose from "mongoose";
 import categoryRoutes from "./category/category.routes.js";
 import userRoutes from "./user/user.routes.js";
+import cartRoutes from "./cart/cart.routes.js";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/cart", cartRoutes);
 
 app.use("*", (req, res) => {
   res.status(404).json({ message: "Route not found" });

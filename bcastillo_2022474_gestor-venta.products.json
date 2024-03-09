@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "65edb166045dae9c7b89094e"
+  },
+  "name": "Laptop Asus DCPGSJ4",
+  "description": "Laptop Asus i7 8th Gen, 16 GB RAM, 512 SSD M2",
+  "category": {
+    "$oid": "65edacd3872f556b67dd6ae2"
+  },
+  "tp_status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65edb9a42140a9b4608e48a6"
+  },
+  "name": "Laptop HP Ryzen 7",
+  "description": "Laptop HP Ryzen 7 7000, 16 GB RAM, 512 SSD M2",
+  "category": {
+    "$oid": "65edacd3872f556b67dd6ae2"
+  },
+  "tp_status": false,
+  "__v": 0
+}]

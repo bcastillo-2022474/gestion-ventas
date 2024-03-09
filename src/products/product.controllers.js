@@ -22,9 +22,16 @@ export const getStatistics = async (req, res) => {
 };
 
 export const getAllProducts = async (req, res) => {
-  const { limit = 5, page = 0 } = req.query;
+  const { limit = 5, page = 0, category } = req.query;
 
-  const query = { tp_status: true };
+  const categoryFound = await Category.findOne({
+    name: category,
+    tp_status: true,
+  });
+
+  const query = categoryFound
+    ? { tp_status: true, category: categoryFound._id }
+    : { tp_status: true };
 
   const [total, products] = await Promise.allSettled([
     Product.countDocuments(query)

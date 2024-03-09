@@ -20,7 +20,6 @@ router.get(
   "/stats",
   [
     validateJwt,
-    isAdminLogged,
     query("limit", "Limit must be an integer").optional().isNumeric(),
     validateRequestParams,
   ],

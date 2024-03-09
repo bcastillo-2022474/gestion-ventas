@@ -1,5 +1,6 @@
 import Product from "./product.model.js";
 import Category from "../category/category.model.js";
+import Sale from "../sale/sale.model.js";
 
 export const getOutOfStockProducts = async (req, res) => {
   const { limit = 5, page = 0 } = req.query;
@@ -17,8 +18,46 @@ export const getOutOfStockProducts = async (req, res) => {
 };
 
 export const getStatistics = async (req, res) => {
-  const { limit } = req.query;
-  res.status(200).json({ stats: "Stats" });
+  const { limit, page } = req.query;
+
+  const sales = await Sale.find().populate({
+    path: "products.product",
+    select: "quantity name price",
+  }).limit(limit).skip(limit*page);
+  
+  const soldProducts = new Map();
+  
+  for (const sale of sales) {
+    for (const product of sale.products) {
+      console.log({product})
+      const productId = product.product._id.toString();
+      const quantity = product.quantity;
+                
+      // Si el producto ya está en el mapa, sumar la cantidad vendida
+      if (soldProducts.has(productId)) {
+          soldProducts.set(productId, soldProducts.get(productId) + quantity);
+      } else { // Si el producto no está en el mapa, inicializar la cantidad vendida
+          soldProducts.set(productId, quantity);
+      }
+    }
+  }
+
+  const sortedSoldProducts = new Map([...soldProducts.entries()].sort((a, b) => b[1] - a[1]));
+
+  // convertir el mapa a un array de objetos
+  console.log(sortedSoldProducts)
+  const products = [];
+  for (const [productId, quantity] of sortedSoldProducts) {
+    console.log({productId, quantity})
+    const product = await Product.findById(productId).select("name price");
+    if (!product) continue;
+    products.push({
+      product: product.name,
+      quantity,
+    });
+  }
+  
+  res.status(200).json({ products });
 };
 
 export const getAllProducts = async (req, res) => {

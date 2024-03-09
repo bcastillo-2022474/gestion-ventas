@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ADMIN_gestion-ventas",
-    "dateExported": "2024-03-11T20:18:16.405Z",
+    "dateExported": "2024-03-13T16:34:35.753Z",
     "version": "1.1",
     "folders": [
         {
@@ -185,26 +185,6 @@
                 }
             ],
             "params": [],
-            "tests": []
-        },
-        {
-            "_id": "ae1c15fe-6f79-43ce-8928-164653d326cd",
-            "colId": "9c597361-0649-4ca5-be88-38022a6dd68b",
-            "containerId": "bb8e5ad2-c1ad-4b62-9217-7428559c17f2",
-            "name": "get stats",
-            "url": "http://localhost:3000/api/products/stats",
-            "method": "GET",
-            "sortNum": 80000,
-            "created": "2024-03-10T20:44:21.139Z",
-            "modified": "2024-03-10T20:44:45.367Z",
-            "headers": [
-                {
-                    "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVkOGVkYTFmZjM0NjM1ODQxZWQ1MGUiLCJ1aWQiOiI2NWVkOGVkYTFmZjM0NjM1ODQxZWQ1MGUiLCJ1c2VybmFtZSI6ImpvYW9jc3QyMSIsImVtYWlsIjoiam9hb0BlbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxZFpVMHBmeDczenJoYTZ5OHFON1hPUlpreWZ5V09ta09vczVCRFI5YnNVVGZobDZ4RnlEeSIsImlhdCI6MTcxMDA3NDUzMiwiZXhwIjoxNzEyNjY2NTMyfQ.HLLKk7-ofm-BCT6VEEd3S5GpE7rg6AhkyzjXqpw6rEI"
-                }
-            ],
-            "params": [],
-            "reqType": "get",
             "tests": []
         },
         {

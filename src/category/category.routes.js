@@ -19,7 +19,6 @@ router
   .get(
     [
       validateJwt,
-      isAdminLogged,
       query("limit", "Limit must be an integer").optional().isNumeric(),
       query("page", "Page must be an integer").optional().isNumeric(),
       validateRequestParams,
@@ -52,7 +51,6 @@ router
   .get(
     [
       validateJwt,
-      isAdminLogged,
       param("id", "Id must be a valid ObjectId").isMongoId(),
       validateRequestParams,
     ],

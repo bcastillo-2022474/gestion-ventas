@@ -52,8 +52,8 @@ router.post(
       addedProduct = {
         product: {
           ...cartDetailFound._doc,
-          price: cartDetailFound.price + productFound.price * quantity,
-          quantity: cartDetailFound.quantity + quantity,
+          price: productFound.price * quantity,
+          quantity: quantity,
         },
       };
     }

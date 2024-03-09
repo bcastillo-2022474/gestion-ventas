@@ -67,16 +67,17 @@ export const updateCategoryById = async (req, res) => {
 export const deleteCategoryById = async (req, res) => {
   const { id } = req.params;
 
-  const DEFAULT_CATEGORY = await Category.findOne({
+  let DEFAULT_CATEGORY = await Category.findOne({
     name: "Default",
     tp_status: true,
   });
 
   if (!DEFAULT_CATEGORY) {
-    return res.status(500).json({
-      message:
-        "Default category not found, unable to transfer products of this category",
+    // create the default category
+    DEFAULT_CATEGORY = new Category({
+      name: "Default",
     });
+    await DEFAULT_CATEGORY.save();
   }
 
   await Product.findOneAndUpdate(

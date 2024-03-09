@@ -45,9 +45,9 @@ router
   .get(
     [
       validateJwt,
-      isAdminLogged,
       query("limit", "Limit must be an integer").optional().isNumeric(),
       query("page", "Page must be an integer").optional().isNumeric(),
+      query("category", "Category must be a string").optional().isString(),
       validateRequestParams,
     ],
     getAllProducts,
@@ -89,7 +89,6 @@ router
   .get(
     [
       validateJwt,
-      isAdminLogged,
       param("id", "Id Must be a MongoID").isMongoId(),
       validateRequestParams,
     ],

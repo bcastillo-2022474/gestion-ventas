@@ -6,10 +6,30 @@ const Sale = new Schema({
     ref: "User",
     required: true,
   },
-  product: {
-    type: Schema.Types.ObjectId,
-    ref: "Product",
+  products: [
+    {
+      product: {
+        type: Schema.Types.ObjectId,
+        ref: "Product",
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+      },
+      price: {
+        type: Number,
+        required: true,
+      },
+    },
+  ],
+  total_price: {
+    type: Number,
     required: true,
+  },
+  purchase_date: {
+    type: Date,
+    default: Date.now,
   },
 });
 

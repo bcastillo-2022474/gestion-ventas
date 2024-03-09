@@ -1,0 +1,227 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CLIENT_gestion-ventas",
+    "dateExported": "2024-03-11T20:19:04.937Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "cart",
+            "containerId": "",
+            "created": "2024-03-11T02:24:28.741Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "249f5cd4-f557-4f53-9e07-2e089907892a",
+            "name": "sale",
+            "containerId": "",
+            "created": "2024-03-11T08:11:38.610Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "29ca4eb3-fa2f-4941-aa0f-d51b2780e46e",
+            "name": "account",
+            "containerId": "",
+            "created": "2024-03-11T18:39:59.355Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b53d2702-b72c-4578-b255-794f8ec0d608",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "get cart",
+            "url": "http://localhost:3000/api/cart",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-03-11T03:29:07.058Z",
+            "modified": "2024-03-11T03:29:29.221Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "eb0dd5a9-01a4-4465-9ea3-c843dc218484",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "post cart item",
+            "url": "http://localhost:3000/api/cart/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-11T02:24:38.685Z",
+            "modified": "2024-03-11T08:16:47.683Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product\": \"Laptop HP Ryzen 5\",\n  \"quantity\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fd0325b0-57c0-4152-8aa2-b80dea601130",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "replace cart item",
+            "url": "http://localhost:3000/api/cart/update",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-11T02:49:12.074Z",
+            "modified": "2024-03-11T19:29:19.217Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product\": \"Laptop Asus DCPGSJ4\",\n  \"quantity\": 2\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "23cc0f2d-d5ad-4fd9-a181-ac939c15db9e",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "delete whole cart",
+            "url": "http://localhost:3000/api/cart/delete",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-11T03:19:33.651Z",
+            "modified": "2024-03-11T03:20:25.539Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "6763f126-8090-4841-bc26-cc64589fc539",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "249f5cd4-f557-4f53-9e07-2e089907892a",
+            "name": "buy cart",
+            "url": "http://localhost:3000/api/buy",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-11T08:11:50.663Z",
+            "modified": "2024-03-11T08:12:39.761Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "86272d32-8978-4bb7-a64e-762213f67bd8",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "83d5b570-c8fd-4907-95ae-7ad8cd0252d2",
+            "name": "delete cart item",
+            "url": "http://localhost:3000/api/cart/delete/item",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-11T03:20:03.521Z",
+            "modified": "2024-03-11T03:23:34.600Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product\": \"Laptop Asus DCPGSJ4\"\n}",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "aa457ca2-c807-4451-a5b6-f3cf49a6fb8d",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "29ca4eb3-fa2f-4941-aa0f-d51b2780e46e",
+            "name": "update perfil",
+            "url": "http://localhost:3000/api/account/perfil",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-11T18:46:25.365Z",
+            "modified": "2024-03-11T18:48:23.114Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"ander1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6e3ff32-14be-48db-9889-0ca60d62016d",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "29ca4eb3-fa2f-4941-aa0f-d51b2780e46e",
+            "name": "delete account",
+            "url": "http://localhost:3000/api/account",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-11T18:48:27.752Z",
+            "modified": "2024-03-11T18:48:48.987Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "e4da0959-b63f-4db9-877d-f0776ab18a70",
+            "colId": "72daab04-dbd8-455d-ad25-3d95627e6596",
+            "containerId": "29ca4eb3-fa2f-4941-aa0f-d51b2780e46e",
+            "name": "see profile",
+            "url": "http://localhost:3000/api/account",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-11T18:49:04.403Z",
+            "modified": "2024-03-11T18:50:21.766Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1aWQiOiI2NWVlNmI4ZDZlZDNiZDIyNDc4MWJiNDIiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkckR4MFNnUlIwSE40TjNNV29jc0UzZXlGMnFlS1d3Ly5FTEk5NkN5ODJHU2N6Y1gxbHNvS0ciLCJpYXQiOjE3MTAxMjM5NDAsImV4cCI6MTcxMjcxNTk0MH0.oJcwtx33Mpeqi0n1ZXhLOVUEgo809s7FwZPiMDIsI-8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
